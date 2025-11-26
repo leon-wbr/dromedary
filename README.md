@@ -75,7 +75,7 @@ export default defineConfig({
       .to("email:notifications?template=mention"),
 
     // 2) Status tick → publish note + email ops
-    from("* * * * *")
+    from("cron:* * * * *")
       .process(statusIntent())
       .to("nostr:publicTimeline?kind=1")
       .to("email:ops?subject=Hourly%20Status"),
