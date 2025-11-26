@@ -1,0 +1,13 @@
+{
+  "name": "@dromedary/poc-example",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "dromedary.config.ts",
+  "scripts": {
+    "start": "dromedary run --config ./dromedary.config.ts"
+  },
+  "dependencies": {
+    "@dromedary/poc-core": "file:../core"
+  }
+}
